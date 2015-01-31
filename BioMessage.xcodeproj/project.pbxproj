@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F0587D9EE5B543A12B018BE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A760242ACFB96F5170FF37C /* libPods.a */; };
+		EB3209F31A7C96CA00459A1E /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3209F21A7C96CA00459A1E /* white.png */; };
+		EB3209F61A7C96D300459A1E /* gray.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3209F41A7C96D300459A1E /* gray.png */; };
+		EB3209F71A7C96D300459A1E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3209F51A7C96D300459A1E /* icon.png */; };
 		EB74C3461A7C87A300636644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB74C3451A7C87A300636644 /* AppDelegate.swift */; };
 		EB74C34B1A7C87A300636644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB74C3491A7C87A300636644 /* Main.storyboard */; };
 		EB74C34D1A7C87A300636644 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB74C34C1A7C87A300636644 /* Images.xcassets */; };
@@ -26,6 +30,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4DE342A0D3C35ABE8265F879 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5A760242ACFB96F5170FF37C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		982748427E788CD67255E103 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EB3209EF1A7C949D00459A1E /* ObjectiveBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveBridge.h; sourceTree = "<group>"; };
+		EB3209F21A7C96CA00459A1E /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
+		EB3209F41A7C96D300459A1E /* gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray.png; sourceTree = "<group>"; };
+		EB3209F51A7C96D300459A1E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		EB74C3401A7C87A300636644 /* BioMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB74C3441A7C87A300636644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB74C3451A7C87A300636644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F0587D9EE5B543A12B018BE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +68,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44554258E22E6683D95DB3DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				982748427E788CD67255E103 /* Pods.debug.xcconfig */,
+				4DE342A0D3C35ABE8265F879 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		646AA3F1009AD6E20D04883A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A760242ACFB96F5170FF37C /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB3209EE1A7C949500459A1E /* util */ = {
+			isa = PBXGroup;
+			children = (
+				EB3209EF1A7C949D00459A1E /* ObjectiveBridge.h */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
 		EB74C3371A7C87A300636644 = {
 			isa = PBXGroup;
 			children = (
 				EB74C3421A7C87A300636644 /* BioMessage */,
 				EB74C3581A7C87A300636644 /* BioMessageTests */,
 				EB74C3411A7C87A300636644 /* Products */,
+				44554258E22E6683D95DB3DD /* Pods */,
+				646AA3F1009AD6E20D04883A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +116,8 @@
 		EB74C3421A7C87A300636644 /* BioMessage */ = {
 			isa = PBXGroup;
 			children = (
+				EB3209EE1A7C949500459A1E /* util */,
+				EB74C36A1A7C8BCB00636644 /* images */,
 				EB74C3651A7C87D300636644 /* views */,
 				EB74C3451A7C87A300636644 /* AppDelegate.swift */,
 				EB74C3491A7C87A300636644 /* Main.storyboard */,
@@ -120,6 +161,16 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		EB74C36A1A7C8BCB00636644 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				EB3209F41A7C96D300459A1E /* gray.png */,
+				EB3209F51A7C96D300459A1E /* icon.png */,
+				EB3209F21A7C96CA00459A1E /* white.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB74C35F1A7C87A300636644 /* Build configuration list for PBXNativeTarget "BioMessage" */;
 			buildPhases = (
+				000E997448FB7458460534AE /* Check Pods Manifest.lock */,
 				EB74C33C1A7C87A300636644 /* Sources */,
 				EB74C33D1A7C87A300636644 /* Frameworks */,
 				EB74C33E1A7C87A300636644 /* Resources */,
+				0943775D8937CDA5F6FB31AB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,8 +255,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB74C34B1A7C87A300636644 /* Main.storyboard in Resources */,
+				EB3209F61A7C96D300459A1E /* gray.png in Resources */,
+				EB3209F71A7C96D300459A1E /* icon.png in Resources */,
 				EB74C3501A7C87A300636644 /* LaunchScreen.xib in Resources */,
 				EB74C34D1A7C87A300636644 /* Images.xcassets in Resources */,
+				EB3209F31A7C96CA00459A1E /* white.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +271,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		000E997448FB7458460534AE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0943775D8937CDA5F6FB31AB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EB74C33C1A7C87A300636644 /* Sources */ = {
@@ -343,23 +432,27 @@
 		};
 		EB74C3601A7C87A300636644 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 982748427E788CD67255E103 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BioMessage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = BioMessage/util/ObjectiveBridge.h;
 			};
 			name = Debug;
 		};
 		EB74C3611A7C87A300636644 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DE342A0D3C35ABE8265F879 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BioMessage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = BioMessage/util/ObjectiveBridge.h;
 			};
 			name = Release;
 		};
@@ -416,6 +509,7 @@
 				EB74C3611A7C87A300636644 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB74C3621A7C87A300636644 /* Build configuration list for PBXNativeTarget "BioMessageTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +518,7 @@
 				EB74C3641A7C87A300636644 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
