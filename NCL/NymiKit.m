@@ -10,6 +10,8 @@
 
 @implementation NymiKit
 
+NclProvision currentProvision;
+
 - (id)init {
     self = [super init];
     if (self) {
@@ -53,7 +55,7 @@
 }
 
 - (void)findNymiBand {
-    nclStartFinding(self.currentProvision, 1, NO);
+    nclStartFinding(&currentProvision, 1, NO);
 }
 
 - (void)validateNymiBand:(int)withHandle {
@@ -93,7 +95,7 @@ void callback(NclEvent event, void *userData) {
                 [nk waitNclForEvent];
                 break;
             case NCL_EVENT_PROVISION:
-                nk.currentProvision = &(event.provision.provision);
+                currentProvision = event.provision.provision;
                 
                 [nk disconnectNymiBand:event.provision.nymiHandle];
                 nymiBandProvisioned = YES;
@@ -105,6 +107,7 @@ void callback(NclEvent event, void *userData) {
     } else {
         switch (event.type) {
             case NCL_EVENT_FIND:
+                NSLog(@"found Nymi, validating...");
                 [nk setEventTypeToWaitFor:NCL_EVENT_VALIDATION];
                 [nk validateNymiBand:event.find.nymiHandle];
                 [nk waitNclForEvent];
@@ -112,6 +115,7 @@ void callback(NclEvent event, void *userData) {
                 break;
             case NCL_EVENT_VALIDATION:
                 [nk disconnectNymiBand:event.validation.nymiHandle];
+                NSLog(@"validated successfully");
                 break;
             case NCL_EVENT_DISCONNECTION:
                 NSLog(@"disconnected reason %s", disconnectionReasonToString(event.disconnection.reason));

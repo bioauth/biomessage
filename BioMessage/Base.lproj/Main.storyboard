@@ -329,14 +329,14 @@
                                 <exclude reference="Wnj-cG-Ibw"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="0jS-vp-BXX"/>
-                                <exclude reference="454-OA-URs"/>
-                                <exclude reference="S4o-Kn-x80"/>
+                                <exclude reference="3nl-Fx-Rev"/>
+                                <exclude reference="FDd-qH-7bJ"/>
                                 <exclude reference="Ek1-Ez-heU"/>
                                 <exclude reference="QRo-oi-j5e"/>
                                 <exclude reference="m50-Jc-bUM"/>
-                                <exclude reference="3nl-Fx-Rev"/>
-                                <exclude reference="FDd-qH-7bJ"/>
+                                <exclude reference="0jS-vp-BXX"/>
+                                <exclude reference="454-OA-URs"/>
+                                <exclude reference="S4o-Kn-x80"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -345,14 +345,14 @@
                                 <include reference="Wnj-cG-Ibw"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="0jS-vp-BXX"/>
-                                <include reference="454-OA-URs"/>
-                                <include reference="S4o-Kn-x80"/>
+                                <exclude reference="3nl-Fx-Rev"/>
+                                <include reference="FDd-qH-7bJ"/>
                                 <include reference="Ek1-Ez-heU"/>
                                 <include reference="QRo-oi-j5e"/>
                                 <include reference="m50-Jc-bUM"/>
-                                <exclude reference="3nl-Fx-Rev"/>
-                                <include reference="FDd-qH-7bJ"/>
+                                <include reference="0jS-vp-BXX"/>
+                                <include reference="454-OA-URs"/>
+                                <include reference="S4o-Kn-x80"/>
                             </mask>
                         </variation>
                     </view>

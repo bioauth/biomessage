@@ -14,7 +14,6 @@
 @property (nonatomic) BOOL correctNclEventReceived;
 @property (nonatomic) NclEventType waitOnEventType;
 @property (nonatomic) NclEvent currentEvent;
-@property (nonatomic) NclProvision *currentProvision;
 
 - (id)init;
 
