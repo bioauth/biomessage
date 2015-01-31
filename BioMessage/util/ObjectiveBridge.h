@@ -12,3 +12,6 @@
 #import "ChameleonFramework/Chameleon.h"
 #import "MBProgressHUD.h"
 #import "NymiKit.h"
+#import "Realm.h"
+
+#import "Person.h"

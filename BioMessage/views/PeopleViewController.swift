@@ -12,6 +12,9 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
 
     @IBOutlet var tableView: UITableView!
     
+    var people = [Person]()
+    var personToSend: Person!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +35,8 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .Default, reuseIdentifier: "PersonCell")
         let contact = contacts[indexPath.row]
+        
+        let person = Person()
         
         var initials = ""
         var name = ""
@@ -54,6 +59,9 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
                 }
             }
         }
+        
+        person.fullName = name
+        person.identifier = contact.recordID
         
         var profile = UIView()
         if let p = contact.photo {
@@ -89,10 +97,31 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
         
         tableView.separatorInset = UIEdgeInsetsMake(0, nameLabel.frame.origin.x, 0, 0)
         
+        let realm = RLMRealm.defaultRealm()
+        
+        realm.beginWriteTransaction()
+        realm.addObject(person)
+        realm.commitWriteTransaction()
+        
+        people.append(person)
+        
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contacts.count
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        personToSend = people[indexPath.row]
+        
+        self.performSegueWithIdentifier("messageSegue", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let mvc = segue.destinationViewController as MessageViewController
+        mvc.person = personToSend
     }
 }

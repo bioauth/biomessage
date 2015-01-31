@@ -58,7 +58,7 @@ class ConfirmViewController: UIViewController {
     
     func loadContacts() {
         let addressBook = APAddressBook()
-        addressBook.fieldsMask = .FirstName | .LastName | .Company | .Phones | .Photo
+        addressBook.fieldsMask = .FirstName | .LastName | .Company | .Phones | .Photo | .RecordID
         addressBook.loadContacts({ (loadedContacts, error) -> Void in
             if error == nil {
                 contacts = loadedContacts as [APContact]

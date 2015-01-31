@@ -256,11 +256,66 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="zyl-Ml-FCA" id="Z0c-Cg-CiJ"/>
+                        <segue destination="mam-8z-oyL" kind="show" identifier="messageSegue" id="knR-63-Bmw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVG-Cl-dUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2355" y="387"/>
+        </scene>
+        <!--Message View Controller-->
+        <scene sceneID="Ysx-hz-dVb">
+            <objects>
+                <viewController id="mam-8z-oyL" customClass="MessageViewController" customModule="BioMessage" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Afo-qg-F4I"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bmk-GM-LPJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m0e-4a-eD8">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="efA-Il-cRe">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="efA-Il-cRe" secondAttribute="trailing" id="0jS-vp-BXX"/>
+                            <constraint firstItem="Bmk-GM-LPJ" firstAttribute="top" secondItem="efA-Il-cRe" secondAttribute="bottom" id="3nl-Fx-Rev"/>
+                            <constraint firstItem="efA-Il-cRe" firstAttribute="leading" secondItem="m0e-4a-eD8" secondAttribute="leading" id="454-OA-URs"/>
+                            <constraint firstItem="efA-Il-cRe" firstAttribute="top" secondItem="Afo-qg-F4I" secondAttribute="bottom" id="S4o-Kn-x80"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="efA-Il-cRe"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0jS-vp-BXX"/>
+                                <exclude reference="454-OA-URs"/>
+                                <exclude reference="S4o-Kn-x80"/>
+                                <exclude reference="3nl-Fx-Rev"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="efA-Il-cRe"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0jS-vp-BXX"/>
+                                <include reference="454-OA-URs"/>
+                                <include reference="S4o-Kn-x80"/>
+                                <include reference="3nl-Fx-Rev"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="efA-Il-cRe" id="QHx-Te-Lb9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gle-UL-ROA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3360" y="387"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pDh-av-atI">
