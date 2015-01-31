@@ -274,43 +274,83 @@
                     <view key="view" contentMode="scaleToFill" id="m0e-4a-eD8">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="efA-Il-cRe">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="efA-Il-cRe">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wnj-cG-Ibw">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Adu-Zt-faE"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" id="5JO-xK-821">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Mrx-HY-FtX">
+                                            <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </barButtonItem>
+                                    <barButtonItem title="Send" id="aTT-gV-qbU"/>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Adu-Zt-faE"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Adu-Zt-faE"/>
+                                    </mask>
+                                </variation>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="efA-Il-cRe" secondAttribute="trailing" id="0jS-vp-BXX"/>
                             <constraint firstItem="Bmk-GM-LPJ" firstAttribute="top" secondItem="efA-Il-cRe" secondAttribute="bottom" id="3nl-Fx-Rev"/>
                             <constraint firstItem="efA-Il-cRe" firstAttribute="leading" secondItem="m0e-4a-eD8" secondAttribute="leading" id="454-OA-URs"/>
+                            <constraint firstItem="Bmk-GM-LPJ" firstAttribute="top" secondItem="Wnj-cG-Ibw" secondAttribute="bottom" id="FDd-qH-7bJ"/>
+                            <constraint firstItem="Wnj-cG-Ibw" firstAttribute="leading" secondItem="m0e-4a-eD8" secondAttribute="leading" id="QRo-oi-j5e"/>
                             <constraint firstItem="efA-Il-cRe" firstAttribute="top" secondItem="Afo-qg-F4I" secondAttribute="bottom" id="S4o-Kn-x80"/>
+                            <constraint firstAttribute="trailing" secondItem="Wnj-cG-Ibw" secondAttribute="trailing" id="m50-Jc-bUM"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="efA-Il-cRe"/>
+                                <exclude reference="Wnj-cG-Ibw"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="0jS-vp-BXX"/>
                                 <exclude reference="454-OA-URs"/>
                                 <exclude reference="S4o-Kn-x80"/>
+                                <exclude reference="QRo-oi-j5e"/>
+                                <exclude reference="m50-Jc-bUM"/>
                                 <exclude reference="3nl-Fx-Rev"/>
+                                <exclude reference="FDd-qH-7bJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="efA-Il-cRe"/>
+                                <include reference="Wnj-cG-Ibw"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="0jS-vp-BXX"/>
                                 <include reference="454-OA-URs"/>
                                 <include reference="S4o-Kn-x80"/>
+                                <include reference="QRo-oi-j5e"/>
+                                <include reference="m50-Jc-bUM"/>
                                 <include reference="3nl-Fx-Rev"/>
+                                <include reference="FDd-qH-7bJ"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="efA-Il-cRe" id="QHx-Te-Lb9"/>
+                        <outlet property="textField" destination="Mrx-HY-FtX" id="6RV-P7-Mqq"/>
+                        <outlet property="toolBar" destination="Wnj-cG-Ibw" id="JQF-Va-Xgm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gle-UL-ROA" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -14,6 +14,6 @@
 
 @property NSString *fullName;
 @property RLMArray<Message> *messages;
-@property NSNumber *identifier;
+@property int identifier;
 
 @end

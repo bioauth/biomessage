@@ -61,7 +61,7 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
         }
         
         person.fullName = name
-        person.identifier = contact.recordID
+        person.identifier = contact.recordID.intValue
         
         var profile = UIView()
         if let p = contact.photo {

@@ -11,6 +11,8 @@ import UIKit
 class MessageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var textField: UITextField!
+    @IBOutlet var toolBar: UIToolbar!
     
     var person: Person!
     
@@ -25,10 +27,28 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
         
         self.navigationItem.title = person.fullName
         
-        self.navigationItem.setHidesBackButton(true, animated: false)
-        
         tableView.dataSource = self
         tableView.delegate = self
+        
+        textField.frame = CGRectMake(16, textField.frame.origin.y, 298, textField.frame.size.height)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        let deviceSize = UIScreen.mainScreen().bounds
+        
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.toolBar.frame = CGRectMake(0, deviceSize.height - self.toolBar.frame.size.height, self.toolBar.frame.size.width, self.toolBar.frame.size.height)
+        })
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        let deviceSize = UIScreen.mainScreen().bounds
+        
+        toolBar.setTranslatesAutoresizingMaskIntoConstraints(true)
+        toolBar.frame = CGRectMake(0, 365, self.toolBar.frame.size.width, self.toolBar.frame.size.height)
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
