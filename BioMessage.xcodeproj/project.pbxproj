@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		EB74C3461A7C87A300636644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB74C3451A7C87A300636644 /* AppDelegate.swift */; };
-		EB74C3481A7C87A300636644 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB74C3471A7C87A300636644 /* ViewController.swift */; };
 		EB74C34B1A7C87A300636644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB74C3491A7C87A300636644 /* Main.storyboard */; };
 		EB74C34D1A7C87A300636644 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB74C34C1A7C87A300636644 /* Images.xcassets */; };
 		EB74C3501A7C87A300636644 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB74C34E1A7C87A300636644 /* LaunchScreen.xib */; };
 		EB74C35C1A7C87A300636644 /* BioMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB74C35B1A7C87A300636644 /* BioMessageTests.swift */; };
+		EB74C3691A7C8AAC00636644 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB74C3681A7C8AAC00636644 /* ConfirmViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +29,13 @@
 		EB74C3401A7C87A300636644 /* BioMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB74C3441A7C87A300636644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB74C3451A7C87A300636644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EB74C3471A7C87A300636644 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EB74C34A1A7C87A300636644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB74C34C1A7C87A300636644 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EB74C34F1A7C87A300636644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EB74C3551A7C87A300636644 /* BioMessageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BioMessageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB74C35A1A7C87A300636644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB74C35B1A7C87A300636644 /* BioMessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioMessageTests.swift; sourceTree = "<group>"; };
+		EB74C3681A7C8AAC00636644 /* ConfirmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +77,8 @@
 		EB74C3421A7C87A300636644 /* BioMessage */ = {
 			isa = PBXGroup;
 			children = (
+				EB74C3651A7C87D300636644 /* views */,
 				EB74C3451A7C87A300636644 /* AppDelegate.swift */,
-				EB74C3471A7C87A300636644 /* ViewController.swift */,
 				EB74C3491A7C87A300636644 /* Main.storyboard */,
 				EB74C34C1A7C87A300636644 /* Images.xcassets */,
 				EB74C34E1A7C87A300636644 /* LaunchScreen.xib */,
@@ -110,6 +110,14 @@
 				EB74C35A1A7C87A300636644 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB74C3651A7C87D300636644 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				EB74C3681A7C8AAC00636644 /* ConfirmViewController.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +169,7 @@
 				TargetAttributes = {
 					EB74C33F1A7C87A300636644 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = JDJKS788L2;
 					};
 					EB74C3541A7C87A300636644 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -212,8 +221,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB74C3481A7C87A300636644 /* ViewController.swift in Sources */,
 				EB74C3461A7C87A300636644 /* AppDelegate.swift in Sources */,
+				EB74C3691A7C8AAC00636644 /* ConfirmViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BioMessage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -346,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BioMessage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
