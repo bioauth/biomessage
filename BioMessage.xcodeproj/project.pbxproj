@@ -13,6 +13,8 @@
 		EB3209F71A7C96D300459A1E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3209F51A7C96D300459A1E /* icon.png */; };
 		EB320A091A7CA49500459A1E /* libNCLNetiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3209FF1A7CA21800459A1E /* libNCLNetiOS.a */; };
 		EB320A181A7CB8D800459A1E /* NymiKit.m in Sources */ = {isa = PBXBuildFile; fileRef = EB320A161A7CAF8500459A1E /* NymiKit.m */; };
+		EB7030BD1A7D040A00F4CBFA /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7030BC1A7D040A00F4CBFA /* PeopleViewController.swift */; };
+		EB7030BF1A7D054300F4CBFA /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7030BE1A7D054300F4CBFA /* Common.swift */; };
 		EB74C3461A7C87A300636644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB74C3451A7C87A300636644 /* AppDelegate.swift */; };
 		EB74C34B1A7C87A300636644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB74C3491A7C87A300636644 /* Main.storyboard */; };
 		EB74C34D1A7C87A300636644 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB74C34C1A7C87A300636644 /* Images.xcassets */; };
@@ -44,6 +46,8 @@
 		EB320A041A7CA43F00459A1E /* ncl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ncl.h; sourceTree = "<group>"; };
 		EB320A151A7CAF8500459A1E /* NymiKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NymiKit.h; sourceTree = "<group>"; };
 		EB320A161A7CAF8500459A1E /* NymiKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NymiKit.m; sourceTree = "<group>"; };
+		EB7030BC1A7D040A00F4CBFA /* PeopleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		EB7030BE1A7D054300F4CBFA /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		EB74C3401A7C87A300636644 /* BioMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB74C3441A7C87A300636644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB74C3451A7C87A300636644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 				EB74C34C1A7C87A300636644 /* Images.xcassets */,
 				EB74C34E1A7C87A300636644 /* LaunchScreen.xib */,
 				EB74C3431A7C87A300636644 /* Supporting Files */,
+				EB7030BE1A7D054300F4CBFA /* Common.swift */,
 			);
 			path = BioMessage;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				EB74C3681A7C8AAC00636644 /* ConfirmViewController.swift */,
+				EB7030BC1A7D040A00F4CBFA /* PeopleViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -332,7 +338,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB320A181A7CB8D800459A1E /* NymiKit.m in Sources */,
+				EB7030BD1A7D040A00F4CBFA /* PeopleViewController.swift in Sources */,
 				EB74C3461A7C87A300636644 /* AppDelegate.swift in Sources */,
+				EB7030BF1A7D054300F4CBFA /* Common.swift in Sources */,
 				EB74C3691A7C8AAC00636644 /* ConfirmViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

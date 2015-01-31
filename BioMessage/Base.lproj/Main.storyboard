@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C106a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MtS-ca-D2x">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MtS-ca-D2x">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -197,20 +197,76 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="6QK-FL-yXL"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="readyButton" destination="izY-1i-f8e" id="uhJ-Bb-j0E"/>
+                        <segue destination="wph-Ps-tM4" kind="show" identifier="peopleSegue" id="81D-0Y-VMd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1272" y="387"/>
+            <point key="canvasLocation" x="1333.5" y="387"/>
+        </scene>
+        <!--People View Controller-->
+        <scene sceneID="KKi-Hz-PRZ">
+            <objects>
+                <viewController id="wph-Ps-tM4" customClass="PeopleViewController" customModule="BioMessage" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wb2-QE-ewQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Liv-8h-SFK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fhu-7b-X2h">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="zyl-Ml-FCA">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zyl-Ml-FCA" secondAttribute="trailing" id="1tz-dV-MUK"/>
+                            <constraint firstItem="zyl-Ml-FCA" firstAttribute="leading" secondItem="fhu-7b-X2h" secondAttribute="leading" id="E8V-Ls-naZ"/>
+                            <constraint firstItem="zyl-Ml-FCA" firstAttribute="top" secondItem="wb2-QE-ewQ" secondAttribute="bottom" id="Sdm-Sf-F0j"/>
+                            <constraint firstItem="Liv-8h-SFK" firstAttribute="top" secondItem="zyl-Ml-FCA" secondAttribute="bottom" id="una-xk-l8Z"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="zyl-Ml-FCA"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1tz-dV-MUK"/>
+                                <exclude reference="E8V-Ls-naZ"/>
+                                <exclude reference="Sdm-Sf-F0j"/>
+                                <exclude reference="una-xk-l8Z"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="zyl-Ml-FCA"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1tz-dV-MUK"/>
+                                <include reference="E8V-Ls-naZ"/>
+                                <include reference="Sdm-Sf-F0j"/>
+                                <include reference="una-xk-l8Z"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="zyl-Ml-FCA" id="Z0c-Cg-CiJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fVG-Cl-dUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2355" y="387"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pDh-av-atI">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="MtS-ca-D2x" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MtS-ca-D2x" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sy5-PN-ZP0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

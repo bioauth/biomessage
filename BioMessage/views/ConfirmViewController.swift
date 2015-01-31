@@ -17,6 +17,9 @@ class ConfirmViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.hidden = true
+        self.navigationController?.navigationBar.barStyle = .Black
+        
         self.view.backgroundColor = UIColor(gradientStyle: UIGradientStyle.TopToBottom, withFrame: self.view.frame, andColors: [UIColor.flatLimeColorDark(), UIColor.flatLimeColor()])
         
         readyButton.setBackgroundImage(UIImage(named: "white.png"), forState: .Normal)
@@ -30,19 +33,43 @@ class ConfirmViewController: UIViewController {
     }
     
     @IBAction func readyButtonPressed(sender: AnyObject) {
-        if let nymikit = nk {
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        
+        switch APAddressBook.access() {
+        case APAddressBookAccess.Granted:
+            loadContacts()
+        case APAddressBookAccess.Denied:
+            MBProgressHUD.hideHUDForView(self.view, animated: false)
+            
+            let url = NSURL(string: UIApplicationOpenSettingsURLString)!
+            UIApplication.sharedApplication().openURL(url)
+        case .Unknown:
+            loadContacts()
+        }
+        
+        /*if let nymikit = nk {
             nk.setEventTypeToWaitFor(NCL_EVENT_FIND)
             nk.findNymiBand()
             nk.waitNclForEvent()
         } else {
             nk = NymiKit()
-        }
-        
-        /*let addressBook = APAddressBook()
-        addressBook.fieldsMask = .FirstName
-        addressBook.loadContacts { (contacts, error) -> Void in
-            
         }*/
+    }
+    
+    func loadContacts() {
+        let addressBook = APAddressBook()
+        addressBook.fieldsMask = .FirstName
+        addressBook.loadContacts({ (loadedContacts, error) -> Void in
+            if error == nil {
+                contacts = loadedContacts as [APContact]
+            } else {
+                let url = NSURL(string: UIApplicationOpenSettingsURLString)!
+                UIApplication.sharedApplication().openURL(url)
+            }
+            
+            MBProgressHUD.hideHUDForView(self.view, animated: true)
+            self.performSegueWithIdentifier("peopleSegue", sender: self)
+        })
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {

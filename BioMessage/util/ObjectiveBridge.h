@@ -7,5 +7,7 @@
 //
 
 #import "APAddressBook.h"
+#import "APContact.h"
 #import "ChameleonFramework/Chameleon.h"
+#import "MBProgressHUD.h"
 #import "NymiKit.h"
