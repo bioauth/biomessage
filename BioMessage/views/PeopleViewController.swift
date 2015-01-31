@@ -55,35 +55,39 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
             }
         }
         
+        var profile = UIView()
         if let p = contact.photo {
-            let imageView = UIImageView(frame: CGRectMake(4, 4, 56, 56))
+            let imageView = UIImageView(image: contact.photo)
             imageView.layer.cornerRadius = 28
             imageView.clipsToBounds = true
-            imageView.image = contact.photo
-            cell.addSubview(imageView)
+            profile = imageView
         } else {
-            let initialsView = BMInitialsPlaceholderView(frame: CGRectMake(4, 4, 56, 56))
+            let initialsView = BMInitialsPlaceholderView(diameter: 56)
             initialsView.batchUpdateViewWithInitials(initials, circleColor: UIColor.randomFlatColor(), textColor: UIColor.whiteColor(), font: UIFont(name: "Avenir-Light", size: 16))
             initialsView.backgroundColor = UIColor.clearColor()
-            cell.addSubview(initialsView)
+            profile = initialsView
         }
+        profile.frame = CGRectMake(12, 4, 56, 56)
         
         let nameLabel = UILabel()
         nameLabel.text = name
         nameLabel.textColor = UIColor.blackColor()
         nameLabel.font = UIFont(name: "Avenir-Roman", size: 16)
         nameLabel.sizeToFit()
-        nameLabel.frame = CGRectMake(60 + 12, 10, nameLabel.frame.size.width, nameLabel.frame.size.height)
+        nameLabel.frame = CGRectMake(profile.frame.origin.x + profile.frame.size.width + 12, 10, nameLabel.frame.size.width, nameLabel.frame.size.height)
         
         let messageLabel = UILabel()
         messageLabel.text = "Let's get coffee or something..."
         messageLabel.textColor = UIColor.flatGrayColorDark()
         messageLabel.font = UIFont(name: "Avenir-Roman", size: 14)
         messageLabel.sizeToFit()
-        messageLabel.frame = CGRectMake(60 + 12, 64 - messageLabel.frame.size.height - 10, messageLabel.frame.size.width, messageLabel.frame.size.height)
+        messageLabel.frame = CGRectMake(profile.frame.origin.x + profile.frame.size.width + 12, 64 - messageLabel.frame.size.height - 10, messageLabel.frame.size.width, messageLabel.frame.size.height)
         
+        cell.addSubview(profile)
         cell.addSubview(nameLabel)
         cell.addSubview(messageLabel)
+        
+        tableView.separatorInset = UIEdgeInsetsMake(0, nameLabel.frame.origin.x, 0, 0)
         
         return cell
     }
