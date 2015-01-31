@@ -13,7 +13,6 @@
 @interface Person : RLMObject
 
 @property NSString *fullName;
-@property RLMArray<Message> *messages;
 @property int identifier;
 
 @end

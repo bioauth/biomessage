@@ -33,27 +33,27 @@ class ConfirmViewController: UIViewController {
     }
     
     @IBAction func readyButtonPressed(sender: AnyObject) {
-        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+//        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+//        
+//        switch APAddressBook.access() {
+//        case APAddressBookAccess.Granted:
+//            loadContacts()
+//        case APAddressBookAccess.Denied:
+//            MBProgressHUD.hideHUDForView(self.view, animated: false)
+//            
+//            let url = NSURL(string: UIApplicationOpenSettingsURLString)!
+//            UIApplication.sharedApplication().openURL(url)
+//        case .Unknown:
+//            loadContacts()
+//        }
         
-        switch APAddressBook.access() {
-        case APAddressBookAccess.Granted:
-            loadContacts()
-        case APAddressBookAccess.Denied:
-            MBProgressHUD.hideHUDForView(self.view, animated: false)
-            
-            let url = NSURL(string: UIApplicationOpenSettingsURLString)!
-            UIApplication.sharedApplication().openURL(url)
-        case .Unknown:
-            loadContacts()
-        }
-        
-        /*if let nymikit = nk {
+        if let nymikit = nk {
             nk.setEventTypeToWaitFor(NCL_EVENT_FIND)
             nk.findNymiBand()
             nk.waitNclForEvent()
         } else {
             nk = NymiKit()
-        }*/
+        }
     }
     
     func loadContacts() {

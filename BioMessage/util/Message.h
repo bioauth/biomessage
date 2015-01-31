@@ -13,6 +13,9 @@
 @property NSString *text;
 @property NSDate *sent;
 
+@property NSString *sender;
+@property NSString *recipient;
+
 @end
 
 RLM_ARRAY_TYPE(Message)

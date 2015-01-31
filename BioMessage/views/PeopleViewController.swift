@@ -33,6 +33,8 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let deviceSize = UIScreen.mainScreen().bounds
+        
         let cell = UITableViewCell(style: .Default, reuseIdentifier: "PersonCell")
         let contact = contacts[indexPath.row]
         
@@ -84,12 +86,14 @@ class PeopleViewController: UIViewController, UITableViewDataSource, UITableView
         nameLabel.sizeToFit()
         nameLabel.frame = CGRectMake(profile.frame.origin.x + profile.frame.size.width + 12, 10, nameLabel.frame.size.width, nameLabel.frame.size.height)
         
+        let messages = Message.allObjects()
+        
         let messageLabel = UILabel()
-        messageLabel.text = "Let's get coffee or something..."
+        messageLabel.text = (messages.lastObject() as Message).text
         messageLabel.textColor = UIColor.flatGrayColorDark()
         messageLabel.font = UIFont(name: "Avenir-Roman", size: 14)
         messageLabel.sizeToFit()
-        messageLabel.frame = CGRectMake(profile.frame.origin.x + profile.frame.size.width + 12, 64 - messageLabel.frame.size.height - 10, messageLabel.frame.size.width, messageLabel.frame.size.height)
+        messageLabel.frame = CGRectMake(profile.frame.origin.x + profile.frame.size.width + 12, 64 - messageLabel.frame.size.height - 10, deviceSize.width - (profile.frame.origin.x + profile.frame.size.width + 12) - 12, messageLabel.frame.size.height)
         
         cell.addSubview(profile)
         cell.addSubview(nameLabel)

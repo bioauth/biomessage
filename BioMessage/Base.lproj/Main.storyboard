@@ -276,7 +276,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="efA-Il-cRe">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="efA-Il-cRe">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -317,6 +317,7 @@
                             <constraint firstAttribute="trailing" secondItem="efA-Il-cRe" secondAttribute="trailing" id="0jS-vp-BXX"/>
                             <constraint firstItem="Bmk-GM-LPJ" firstAttribute="top" secondItem="efA-Il-cRe" secondAttribute="bottom" id="3nl-Fx-Rev"/>
                             <constraint firstItem="efA-Il-cRe" firstAttribute="leading" secondItem="m0e-4a-eD8" secondAttribute="leading" id="454-OA-URs"/>
+                            <constraint firstItem="Wnj-cG-Ibw" firstAttribute="top" secondItem="efA-Il-cRe" secondAttribute="bottom" id="Ek1-Ez-heU"/>
                             <constraint firstItem="Bmk-GM-LPJ" firstAttribute="top" secondItem="Wnj-cG-Ibw" secondAttribute="bottom" id="FDd-qH-7bJ"/>
                             <constraint firstItem="Wnj-cG-Ibw" firstAttribute="leading" secondItem="m0e-4a-eD8" secondAttribute="leading" id="QRo-oi-j5e"/>
                             <constraint firstItem="efA-Il-cRe" firstAttribute="top" secondItem="Afo-qg-F4I" secondAttribute="bottom" id="S4o-Kn-x80"/>
@@ -328,13 +329,14 @@
                                 <exclude reference="Wnj-cG-Ibw"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="3nl-Fx-Rev"/>
-                                <exclude reference="FDd-qH-7bJ"/>
-                                <exclude reference="QRo-oi-j5e"/>
-                                <exclude reference="m50-Jc-bUM"/>
                                 <exclude reference="0jS-vp-BXX"/>
                                 <exclude reference="454-OA-URs"/>
                                 <exclude reference="S4o-Kn-x80"/>
+                                <exclude reference="Ek1-Ez-heU"/>
+                                <exclude reference="QRo-oi-j5e"/>
+                                <exclude reference="m50-Jc-bUM"/>
+                                <exclude reference="3nl-Fx-Rev"/>
+                                <exclude reference="FDd-qH-7bJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -343,13 +345,14 @@
                                 <include reference="Wnj-cG-Ibw"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="3nl-Fx-Rev"/>
-                                <include reference="FDd-qH-7bJ"/>
-                                <include reference="QRo-oi-j5e"/>
-                                <include reference="m50-Jc-bUM"/>
                                 <include reference="0jS-vp-BXX"/>
                                 <include reference="454-OA-URs"/>
                                 <include reference="S4o-Kn-x80"/>
+                                <include reference="Ek1-Ez-heU"/>
+                                <include reference="QRo-oi-j5e"/>
+                                <include reference="m50-Jc-bUM"/>
+                                <exclude reference="3nl-Fx-Rev"/>
+                                <include reference="FDd-qH-7bJ"/>
                             </mask>
                         </variation>
                     </view>
