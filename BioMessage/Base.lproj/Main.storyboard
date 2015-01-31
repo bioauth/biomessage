@@ -104,6 +104,9 @@
                                         <include reference="tPG-b5-SbR"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="readyButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="50y-vX-aoP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.59489071369171143" green="0.74986636638641357" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

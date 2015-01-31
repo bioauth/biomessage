@@ -27,6 +27,14 @@ class ConfirmViewController: UIViewController {
         readyButton.titleLabel?.font = UIFont(name: "Avenir-Roman", size: 28)
     }
     
+    @IBAction func readyButtonPressed(sender: AnyObject) {
+        let addressBook = APAddressBook()
+        addressBook.fieldsMask = .FirstName
+        addressBook.loadContacts { (contacts, error) -> Void in
+            
+        }
+    }
+    
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
     }
