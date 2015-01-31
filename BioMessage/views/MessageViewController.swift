@@ -44,6 +44,20 @@ class MessageViewController: UIViewController, UITableViewDataSource, UITableVie
         })
     }
     
+    @IBAction func sendButtonPressed(sender: AnyObject) {
+        let deviceSize = UIScreen.mainScreen().bounds
+        
+        let message = Message()
+        message.text = textField.text
+        
+        let messageView = MessageView(message: message)
+        messageView.frame = CGRectMake(deviceSize.width - messageView.size.width, 100, messageView.size.width, messageView.size.height)
+        
+        self.view.addSubview(messageView)
+        
+        textField.text = ""
+    }
+    
     func keyboardWillShow(notification: NSNotification) {
         let deviceSize = UIScreen.mainScreen().bounds
         

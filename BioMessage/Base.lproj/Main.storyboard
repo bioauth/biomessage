@@ -216,6 +216,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Liv-8h-SFK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fhu-7b-X2h">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="zyl-Ml-FCA">
@@ -235,10 +236,10 @@
                                 <exclude reference="zyl-Ml-FCA"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="una-xk-l8Z"/>
                                 <exclude reference="1tz-dV-MUK"/>
                                 <exclude reference="E8V-Ls-naZ"/>
                                 <exclude reference="Sdm-Sf-F0j"/>
-                                <exclude reference="una-xk-l8Z"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -246,10 +247,10 @@
                                 <include reference="zyl-Ml-FCA"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="una-xk-l8Z"/>
                                 <include reference="1tz-dV-MUK"/>
                                 <include reference="E8V-Ls-naZ"/>
                                 <include reference="Sdm-Sf-F0j"/>
-                                <include reference="una-xk-l8Z"/>
                             </mask>
                         </variation>
                     </view>
@@ -272,6 +273,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Bmk-GM-LPJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="m0e-4a-eD8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="efA-Il-cRe">
@@ -292,7 +294,11 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </barButtonItem>
-                                    <barButtonItem title="Send" id="aTT-gV-qbU"/>
+                                    <barButtonItem title="Send" id="aTT-gV-qbU">
+                                        <connections>
+                                            <action selector="sendButtonPressed:" destination="mam-8z-oyL" id="HBI-0e-YeO"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -322,13 +328,13 @@
                                 <exclude reference="Wnj-cG-Ibw"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="3nl-Fx-Rev"/>
+                                <exclude reference="FDd-qH-7bJ"/>
+                                <exclude reference="QRo-oi-j5e"/>
+                                <exclude reference="m50-Jc-bUM"/>
                                 <exclude reference="0jS-vp-BXX"/>
                                 <exclude reference="454-OA-URs"/>
                                 <exclude reference="S4o-Kn-x80"/>
-                                <exclude reference="QRo-oi-j5e"/>
-                                <exclude reference="m50-Jc-bUM"/>
-                                <exclude reference="3nl-Fx-Rev"/>
-                                <exclude reference="FDd-qH-7bJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -337,13 +343,13 @@
                                 <include reference="Wnj-cG-Ibw"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="3nl-Fx-Rev"/>
+                                <include reference="FDd-qH-7bJ"/>
+                                <include reference="QRo-oi-j5e"/>
+                                <include reference="m50-Jc-bUM"/>
                                 <include reference="0jS-vp-BXX"/>
                                 <include reference="454-OA-URs"/>
                                 <include reference="S4o-Kn-x80"/>
-                                <include reference="QRo-oi-j5e"/>
-                                <include reference="m50-Jc-bUM"/>
-                                <include reference="3nl-Fx-Rev"/>
-                                <include reference="FDd-qH-7bJ"/>
                             </mask>
                         </variation>
                     </view>

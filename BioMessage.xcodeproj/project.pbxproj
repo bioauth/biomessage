@@ -19,6 +19,7 @@
 		EB7030C51A7D223600F4CBFA /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7030C41A7D223600F4CBFA /* MessageViewController.swift */; };
 		EB7030D01A7D319000F4CBFA /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7030CF1A7D319000F4CBFA /* Person.m */; };
 		EB7030D21A7D31A600F4CBFA /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7030D11A7D31A600F4CBFA /* Message.m */; };
+		EB7030D41A7D4A6500F4CBFA /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7030D31A7D4A6500F4CBFA /* MessageView.swift */; };
 		EB74C3461A7C87A300636644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB74C3451A7C87A300636644 /* AppDelegate.swift */; };
 		EB74C34B1A7C87A300636644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB74C3491A7C87A300636644 /* Main.storyboard */; };
 		EB74C34D1A7C87A300636644 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB74C34C1A7C87A300636644 /* Images.xcassets */; };
@@ -58,6 +59,7 @@
 		EB7030C91A7D2BB800F4CBFA /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		EB7030CF1A7D319000F4CBFA /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		EB7030D11A7D31A600F4CBFA /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		EB7030D31A7D4A6500F4CBFA /* MessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageView.swift; path = BioMessage/views/MessageView.swift; sourceTree = SOURCE_ROOT; };
 		EB74C3401A7C87A300636644 /* BioMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB74C3441A7C87A300636644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB74C3451A7C87A300636644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				EB7030CF1A7D319000F4CBFA /* Person.m */,
 				EB7030C91A7D2BB800F4CBFA /* Message.h */,
 				EB7030D11A7D31A600F4CBFA /* Message.m */,
+				EB7030D31A7D4A6500F4CBFA /* MessageView.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				EB7030BD1A7D040A00F4CBFA /* PeopleViewController.swift in Sources */,
 				EB7030D01A7D319000F4CBFA /* Person.m in Sources */,
 				EB74C3461A7C87A300636644 /* AppDelegate.swift in Sources */,
+				EB7030D41A7D4A6500F4CBFA /* MessageView.swift in Sources */,
 				EB7030BF1A7D054300F4CBFA /* Common.swift in Sources */,
 				EB74C3691A7C8AAC00636644 /* ConfirmViewController.swift in Sources */,
 				EB7030C31A7D1BE300F4CBFA /* StringUtils.swift in Sources */,
