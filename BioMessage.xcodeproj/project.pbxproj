@@ -11,6 +11,8 @@
 		EB3209F31A7C96CA00459A1E /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3209F21A7C96CA00459A1E /* white.png */; };
 		EB3209F61A7C96D300459A1E /* gray.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3209F41A7C96D300459A1E /* gray.png */; };
 		EB3209F71A7C96D300459A1E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3209F51A7C96D300459A1E /* icon.png */; };
+		EB320A091A7CA49500459A1E /* libNCLNetiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3209FF1A7CA21800459A1E /* libNCLNetiOS.a */; };
+		EB320A181A7CB8D800459A1E /* NymiKit.m in Sources */ = {isa = PBXBuildFile; fileRef = EB320A161A7CAF8500459A1E /* NymiKit.m */; };
 		EB74C3461A7C87A300636644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB74C3451A7C87A300636644 /* AppDelegate.swift */; };
 		EB74C34B1A7C87A300636644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB74C3491A7C87A300636644 /* Main.storyboard */; };
 		EB74C34D1A7C87A300636644 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB74C34C1A7C87A300636644 /* Images.xcassets */; };
@@ -37,6 +39,11 @@
 		EB3209F21A7C96CA00459A1E /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = white.png; sourceTree = "<group>"; };
 		EB3209F41A7C96D300459A1E /* gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gray.png; sourceTree = "<group>"; };
 		EB3209F51A7C96D300459A1E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		EB3209FE1A7CA21800459A1E /* libNCLiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNCLiOS.a; sourceTree = "<group>"; };
+		EB3209FF1A7CA21800459A1E /* libNCLNetiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNCLNetiOS.a; sourceTree = "<group>"; };
+		EB320A041A7CA43F00459A1E /* ncl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ncl.h; sourceTree = "<group>"; };
+		EB320A151A7CAF8500459A1E /* NymiKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NymiKit.h; sourceTree = "<group>"; };
+		EB320A161A7CAF8500459A1E /* NymiKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NymiKit.m; sourceTree = "<group>"; };
 		EB74C3401A7C87A300636644 /* BioMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB74C3441A7C87A300636644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB74C3451A7C87A300636644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB320A091A7CA49500459A1E /* libNCLNetiOS.a in Frameworks */,
 				2F0587D9EE5B543A12B018BE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,9 +101,22 @@
 			path = util;
 			sourceTree = "<group>";
 		};
+		EB3209FD1A7CA21800459A1E /* NCL */ = {
+			isa = PBXGroup;
+			children = (
+				EB320A041A7CA43F00459A1E /* ncl.h */,
+				EB3209FE1A7CA21800459A1E /* libNCLiOS.a */,
+				EB3209FF1A7CA21800459A1E /* libNCLNetiOS.a */,
+				EB320A151A7CAF8500459A1E /* NymiKit.h */,
+				EB320A161A7CAF8500459A1E /* NymiKit.m */,
+			);
+			path = NCL;
+			sourceTree = "<group>";
+		};
 		EB74C3371A7C87A300636644 = {
 			isa = PBXGroup;
 			children = (
+				EB3209FD1A7CA21800459A1E /* NCL */,
 				EB74C3421A7C87A300636644 /* BioMessage */,
 				EB74C3581A7C87A300636644 /* BioMessageTests */,
 				EB74C3411A7C87A300636644 /* Products */,
@@ -310,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB320A181A7CB8D800459A1E /* NymiKit.m in Sources */,
 				EB74C3461A7C87A300636644 /* AppDelegate.swift in Sources */,
 				EB74C3691A7C8AAC00636644 /* ConfirmViewController.swift in Sources */,
 			);
@@ -438,6 +460,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BioMessage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NCL",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = BioMessage/util/ObjectiveBridge.h;
 			};
@@ -451,6 +477,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BioMessage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NCL",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = BioMessage/util/ObjectiveBridge.h;
 			};

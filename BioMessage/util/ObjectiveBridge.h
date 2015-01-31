@@ -8,3 +8,4 @@
 
 #import "APAddressBook.h"
 #import "ChameleonFramework/Chameleon.h"
+#import "NymiKit.h"

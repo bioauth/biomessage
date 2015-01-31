@@ -12,6 +12,8 @@ class ConfirmViewController: UIViewController {
 
     @IBOutlet var readyButton: UIButton!
     
+    var nk: NymiKit!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,11 +30,19 @@ class ConfirmViewController: UIViewController {
     }
     
     @IBAction func readyButtonPressed(sender: AnyObject) {
-        let addressBook = APAddressBook()
+        if let nymikit = nk {
+            nk.setEventTypeToWaitFor(NCL_EVENT_FIND)
+            nk.findNymiBand()
+            nk.waitNclForEvent()
+        } else {
+            nk = NymiKit()
+        }
+        
+        /*let addressBook = APAddressBook()
         addressBook.fieldsMask = .FirstName
         addressBook.loadContacts { (contacts, error) -> Void in
             
-        }
+        }*/
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
