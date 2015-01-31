@@ -8,6 +8,7 @@
 
 #import "APAddressBook.h"
 #import "APContact.h"
+#import "BMInitialsPlaceholderView.h"
 #import "ChameleonFramework/Chameleon.h"
 #import "MBProgressHUD.h"
 #import "NymiKit.h"
