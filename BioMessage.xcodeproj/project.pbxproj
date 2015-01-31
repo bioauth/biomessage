@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EB74C3461A7C87A300636644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB74C3451A7C87A300636644 /* AppDelegate.swift */; };
+		EB74C3481A7C87A300636644 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB74C3471A7C87A300636644 /* ViewController.swift */; };
+		EB74C34B1A7C87A300636644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB74C3491A7C87A300636644 /* Main.storyboard */; };
+		EB74C34D1A7C87A300636644 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB74C34C1A7C87A300636644 /* Images.xcassets */; };
+		EB74C3501A7C87A300636644 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB74C34E1A7C87A300636644 /* LaunchScreen.xib */; };
+		EB74C35C1A7C87A300636644 /* BioMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB74C35B1A7C87A300636644 /* BioMessageTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EB74C3561A7C87A300636644 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB74C3381A7C87A300636644 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB74C33F1A7C87A300636644;
+			remoteInfo = BioMessage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EB74C3401A7C87A300636644 /* BioMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB74C3441A7C87A300636644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB74C3451A7C87A300636644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EB74C3471A7C87A300636644 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EB74C34A1A7C87A300636644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EB74C34C1A7C87A300636644 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EB74C34F1A7C87A300636644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EB74C3551A7C87A300636644 /* BioMessageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BioMessageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB74C35A1A7C87A300636644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB74C35B1A7C87A300636644 /* BioMessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioMessageTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB74C33D1A7C87A300636644 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB74C3521A7C87A300636644 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EB74C3371A7C87A300636644 = {
+			isa = PBXGroup;
+			children = (
+				EB74C3421A7C87A300636644 /* BioMessage */,
+				EB74C3581A7C87A300636644 /* BioMessageTests */,
+				EB74C3411A7C87A300636644 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EB74C3411A7C87A300636644 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB74C3401A7C87A300636644 /* BioMessage.app */,
+				EB74C3551A7C87A300636644 /* BioMessageTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB74C3421A7C87A300636644 /* BioMessage */ = {
+			isa = PBXGroup;
+			children = (
+				EB74C3451A7C87A300636644 /* AppDelegate.swift */,
+				EB74C3471A7C87A300636644 /* ViewController.swift */,
+				EB74C3491A7C87A300636644 /* Main.storyboard */,
+				EB74C34C1A7C87A300636644 /* Images.xcassets */,
+				EB74C34E1A7C87A300636644 /* LaunchScreen.xib */,
+				EB74C3431A7C87A300636644 /* Supporting Files */,
+			);
+			path = BioMessage;
+			sourceTree = "<group>";
+		};
+		EB74C3431A7C87A300636644 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB74C3441A7C87A300636644 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB74C3581A7C87A300636644 /* BioMessageTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB74C35B1A7C87A300636644 /* BioMessageTests.swift */,
+				EB74C3591A7C87A300636644 /* Supporting Files */,
+			);
+			path = BioMessageTests;
+			sourceTree = "<group>";
+		};
+		EB74C3591A7C87A300636644 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB74C35A1A7C87A300636644 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EB74C33F1A7C87A300636644 /* BioMessage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB74C35F1A7C87A300636644 /* Build configuration list for PBXNativeTarget "BioMessage" */;
+			buildPhases = (
+				EB74C33C1A7C87A300636644 /* Sources */,
+				EB74C33D1A7C87A300636644 /* Frameworks */,
+				EB74C33E1A7C87A300636644 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BioMessage;
+			productName = BioMessage;
+			productReference = EB74C3401A7C87A300636644 /* BioMessage.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EB74C3541A7C87A300636644 /* BioMessageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB74C3621A7C87A300636644 /* Build configuration list for PBXNativeTarget "BioMessageTests" */;
+			buildPhases = (
+				EB74C3511A7C87A300636644 /* Sources */,
+				EB74C3521A7C87A300636644 /* Frameworks */,
+				EB74C3531A7C87A300636644 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB74C3571A7C87A300636644 /* PBXTargetDependency */,
+			);
+			name = BioMessageTests;
+			productName = BioMessageTests;
+			productReference = EB74C3551A7C87A300636644 /* BioMessageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB74C3381A7C87A300636644 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Jack Cook";
+				TargetAttributes = {
+					EB74C33F1A7C87A300636644 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					EB74C3541A7C87A300636644 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = EB74C33F1A7C87A300636644;
+					};
+				};
+			};
+			buildConfigurationList = EB74C33B1A7C87A300636644 /* Build configuration list for PBXProject "BioMessage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EB74C3371A7C87A300636644;
+			productRefGroup = EB74C3411A7C87A300636644 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB74C33F1A7C87A300636644 /* BioMessage */,
+				EB74C3541A7C87A300636644 /* BioMessageTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB74C33E1A7C87A300636644 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB74C34B1A7C87A300636644 /* Main.storyboard in Resources */,
+				EB74C3501A7C87A300636644 /* LaunchScreen.xib in Resources */,
+				EB74C34D1A7C87A300636644 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB74C3531A7C87A300636644 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB74C33C1A7C87A300636644 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB74C3481A7C87A300636644 /* ViewController.swift in Sources */,
+				EB74C3461A7C87A300636644 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB74C3511A7C87A300636644 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB74C35C1A7C87A300636644 /* BioMessageTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EB74C3571A7C87A300636644 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB74C33F1A7C87A300636644 /* BioMessage */;
+			targetProxy = EB74C3561A7C87A300636644 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EB74C3491A7C87A300636644 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB74C34A1A7C87A300636644 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EB74C34E1A7C87A300636644 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB74C34F1A7C87A300636644 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EB74C35D1A7C87A300636644 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EB74C35E1A7C87A300636644 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EB74C3601A7C87A300636644 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BioMessage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EB74C3611A7C87A300636644 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BioMessage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EB74C3631A7C87A300636644 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BioMessageTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BioMessage.app/BioMessage";
+			};
+			name = Debug;
+		};
+		EB74C3641A7C87A300636644 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BioMessageTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BioMessage.app/BioMessage";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB74C33B1A7C87A300636644 /* Build configuration list for PBXProject "BioMessage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB74C35D1A7C87A300636644 /* Debug */,
+				EB74C35E1A7C87A300636644 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB74C35F1A7C87A300636644 /* Build configuration list for PBXNativeTarget "BioMessage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB74C3601A7C87A300636644 /* Debug */,
+				EB74C3611A7C87A300636644 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EB74C3621A7C87A300636644 /* Build configuration list for PBXNativeTarget "BioMessageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB74C3631A7C87A300636644 /* Debug */,
+				EB74C3641A7C87A300636644 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EB74C3381A7C87A300636644 /* Project object */;
+}
